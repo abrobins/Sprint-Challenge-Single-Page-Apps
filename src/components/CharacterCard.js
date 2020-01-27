@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { Card, CardBody, CardTitle, CardText, CardImg } from "reactstrap";
+import { Card, CardTitle, CardText, Button } from "reactstrap";
 
 const CharacterCard = props => {
   console.log("character card props: ", props);
@@ -25,16 +25,27 @@ const CharacterCard = props => {
 
   return (
     <div>
-      <Card>
-        {/* <CardImg width="100px" src={current.image} alt="Character image" /> */}
-        <CardBody>
-          <CardTitle>Name: {current.name}</CardTitle>
-          <CardText>Status: {current.status}</CardText>
-          <CardText>Species: {current.species}</CardText>
-          <CardText>
+      <Card body outline color="secondary">
+        {/* <CardImg
+          width="50%"
+          src={current.image}
+          alt="Character image"
+        /> */}
+
+        <CardTitle>
+          <strong>Name:</strong> {current.name}
+        </CardTitle>
+        <CardText>
+          <strong>Status:</strong> {current.status}
+        </CardText>
+        <CardText>
+          <strong>Species:</strong> {current.species}
+        </CardText>
+        <CardText>
+          <Button outline color="primary">
             <Link to="/">Return Home</Link>
-          </CardText>
-        </CardBody>
+          </Button>
+        </CardText>
       </Card>
     </div>
   );
