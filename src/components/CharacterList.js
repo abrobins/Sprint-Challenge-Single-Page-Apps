@@ -43,6 +43,7 @@ export default function CharacterList() {
             <th>Name</th>
             <th>Status</th>
             <th>Species</th>
+            <th>Image</th>
           </tr>
         </thead>
         <tbody>
@@ -57,6 +58,9 @@ export default function CharacterList() {
               </td>
               <td>{char.status}</td>
               <td>{char.species}</td>
+              <td>
+                <img src={char.image} width="80px"></img>
+              </td>
               {/* </Link> */}
             </tr>
           ))}
