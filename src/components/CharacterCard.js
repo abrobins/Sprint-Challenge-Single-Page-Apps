@@ -42,9 +42,11 @@ const CharacterCard = props => {
           <strong>Species:</strong> {current.species}
         </CardText>
         <CardText>
-          <Button outline color="primary">
-            <Link to="/">Return Home</Link>
-          </Button>
+          <Link to="/">
+            <Button outline color="primary">
+              Return Home
+            </Button>
+          </Link>
         </CardText>
       </Card>
     </div>
